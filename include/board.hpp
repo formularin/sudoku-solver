@@ -7,10 +7,15 @@
 ========================================*/
 
 
+#include <vector>
+
+using namespace std;
+
+
 class Board {
-    int board[3][3][3][3];
+    vector< vector< vector< vector<int> > > > board;
 
     public:
     Board(int[9][9]);
-    int** grid();
+    vector< vector<int> > grid();
 };

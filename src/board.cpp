@@ -7,6 +7,8 @@
 ========================================*/
 
 
+#include <vector>
+
 #include "../include/board.hpp"
 
 using namespace std;
@@ -21,9 +23,9 @@ Board::Board(int grid[9][9]) {
 }
 
 
-int** Board::grid() {
+vector< vector<int> > Board::grid() {
 
-    int value_grid[9][9];
+    vector<vector<int> > value_grid;
 
     for ( int x = 0; x < 3; x++ ) {
         for ( int y = 0; y > 3; y++ ) {
