@@ -2,16 +2,17 @@
  solve.cpp:                     lol-cubes
  last modified:               Mon, Mar 23
  
- This file contains an implementation of
- the backtracking algorithm to solve a
- sudoku puzzle.
+ Solves a sudoku puzzle.
+ ./solve [input_file] [output_file]
+ See README.md for more information.
 ========================================*/
 
 
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <sstream>
+
+#include "../include/board.hpp"
 
 using namespace std;
 
@@ -34,11 +35,13 @@ int main(int argc, char** argv) {
     }
     input_file.close();
 
+    Board board(grid);
+
     // Write output to file
     ofstream output_file(argv[2]);
     for ( int x = 0; x < 9; x++ ) {
         for ( int y = 0; y < 9; y++ ) {
-            output_file << grid[x][y];
+            output_file << board.grid()[x][y];
         }
         if (x != 8) {
             output_file << endl;
