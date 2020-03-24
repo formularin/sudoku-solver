@@ -13,9 +13,7 @@ using namespace std;
 
 
 class Board {
-    vector< vector< vector< vector<int> > > > board;
-
     public:
-    Board(int[9][9]);
-    vector< vector<int> > grid();
+    vector< vector<int> > board;
+    Board(vector< vector<int> >);
 };
