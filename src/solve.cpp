@@ -53,6 +53,7 @@ int main(int argc, char** argv) {
 
     // Create Board object and solve puzzle
     Board board = Board(grid);
+    board.solve();
 
     // Write output to file
     std::ofstream output_file(argv[2]);
