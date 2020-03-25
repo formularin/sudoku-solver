@@ -1,5 +1,5 @@
 /*=======================================
- board.hpp:                     lol-cubes
+ board.cpp:                     lol-cubes
  last modified:               Mon, Mar 25
  
  Method implementations for the `Board`
@@ -11,14 +11,9 @@
 #include <vector>
 
 #include "../include/board.hpp"
+#include "../include/utils.hpp"
 
 using std::vector;
-
-
-bool get_int_in_vector(vector<int> v, int x) {
-    // Returns bool - whether or not x is in v
-    return find(v.begin(), v.end(), x ) != v.end();
-}
 
 
 Board::Board(vector< vector<int> > grid) {

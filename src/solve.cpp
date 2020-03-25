@@ -14,20 +14,9 @@
 #include <vector>
 
 #include "../include/board.hpp"
+#include "../include/utils.hpp"
 
 using std::vector;
-
-
-void print_2d(vector< vector<int> > grid) {
-    // Pretty prints a 2d vector as a matrix
-    for ( vector<int> row : grid ) {
-        for ( int val : row ) {
-            std::cout << val;
-            std::cout << " ";
-        }
-        std::cout << std::endl;
-    }
-}
 
 
 int main(int argc, char** argv) {
