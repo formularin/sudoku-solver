@@ -4,3 +4,4 @@
  - Implement algorithm.
  - Remove `using namespace std`
  - Change docstrings to use `//`
+ - Add makefile
