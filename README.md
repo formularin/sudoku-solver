@@ -4,18 +4,20 @@ Solves sudoku puzzles.
 
 Usage:
 
-`solve [input_file] [output_file]`
+`cat [input_file] | solve`
+
+Example `input_file`:
 
 ```
-[input_file]
-
-000000070
-000050801
-006410035
-607000520
-000209000
-041000609
-970021400
-105030000
-080000000
+400002830
+080104002
+706080500
+100007050
+270500019
+030940006
+008090705
+300806090
+042700003
 ```
+
+This will print out the solved board.
