@@ -2,9 +2,18 @@
 
 Solves sudoku puzzles.
 
-Usage:
+## Installation
 
-`cat [input_file] | solve`
+```
+git clone https://github.com/lol-cubes/sudoku-solver.git
+cd sudoku-solver
+make
+make install
+```
+
+## Usage
+
+`cat [input_file] | sudoku-solver`
 
 Example `input_file`:
 
@@ -21,3 +30,6 @@ Example `input_file`:
 ```
 
 This will print out the solved board.
+Redirect output to file using:
+
+`cat [input_file] | sudoku-solver > [output_file]`
