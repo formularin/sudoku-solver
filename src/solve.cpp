@@ -9,7 +9,6 @@
 
 
 #include <iostream>
-#include <fstream>
 #include <string>
 #include <vector>
 
@@ -21,14 +20,12 @@ using std::vector;
 
 int main(int argc, char** argv) {
 
-    // Read file to 2d array of strings
-    std::ifstream input_file(argv[1]);
+    // Convert input to 2d array of int.
     vector< vector<int> > grid;
-    std::string line;
     int l = 0;
-    while ( std::getline(input_file, line) ) {
+    for ( std::string line; std::getline(std::cin, line); ) {
         vector<int> row;
-        for (std::string::size_type c = 0; c < line.size(); c++) {
+        for ( std::string::size_type c = 0; c < line.size(); c++ ) {
             std::string value;
             value.push_back(line[c]);
             row.push_back(stoi(value));
@@ -36,26 +33,12 @@ int main(int argc, char** argv) {
         grid.push_back(row);
         l++;
     }
-    input_file.close();
 
-    // Create Board object and solve puzzle
+    // Create Board object and solve puzzle.
     Board board = Board(grid);
     board.solve();
 
+    // Print output.
     print_2d(board.board);
-    std::cout << std::endl;
-
-    // Write output to file
-    std::ofstream output_file(argv[2]);
-    for ( int x = 0; x < 9; x++ ) {
-        for ( int y = 0; y < 9; y++ ) {
-            output_file << board.board[x][y];
-        }
-        if (x != 8) {
-            output_file << std::endl;
-        }
-    }
-    output_file.close();
-
     return 0;
 }

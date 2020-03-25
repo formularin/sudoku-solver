@@ -24,20 +24,11 @@ void print_2d(vector< vector<int> > grid) {
     // Pretty prints a 2d vector as a matrix
     for ( int r = 0; r < grid.size(); r++ ) {
         vector<int> row = grid[r];
-        for ( int val : row ) {
-            std::cout << val;
-            std::cout << " ";
+        for ( int v = 0; v < row.size(); v++ ) {
+            std::cout << row[v];
+            if ( v < row.size() - 1 ) std::cout << " ";
         }
-        if ( !(r == grid.size() - 1) ) std::cout << std::endl;
-    }
-    std::cout.flush();
-}
-
-
-void reset_cursor() {
-    // Moves cursor up 8 lines.
-    for ( int i = 0; i < 8; i++ ) {
-        std::cout << "\033[F";
+        if ( r < grid.size() - 1 ) std::cout << std::endl;
     }
     std::cout.flush();
 }
