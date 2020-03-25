@@ -29,10 +29,8 @@ Board::Board(vector< vector<int> > grid) {
 
 
 vector<int> Board::get_eligible_values() {
-    /*
-    Returns all the eligible values for the
-    first unfilled box in this board.
-    */
+    // Returns all the eligible values for the
+    // first unfilled box in this board.
 
     vector<int> eligible_values;
     // Coordinates of first unfilled point.

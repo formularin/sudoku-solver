@@ -19,9 +19,7 @@ using namespace std;
 
 
 void print_2d(vector< vector<int> > grid) {
-    /*
-    Pretty prints a 2d vector as a matrix
-    */
+    // Pretty prints a 2d vector as a matrix
     for ( vector<int> row : grid ) {
         for ( int val : row ) {
             cout << val;
