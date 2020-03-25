@@ -127,6 +127,8 @@ int Board::solve() {
             // Fills cell with eligible value.
             int index = std::rand() % untried_values.size();
             board[row][col] = untried_values[index];
+            print_2d(board);
+            reset_cursor();
 
             if ( is_solved() ) {
                 return 0;

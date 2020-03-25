@@ -14,3 +14,4 @@ using std::vector;
 
 bool get_int_in_vector(vector<int> v, int x);
 void print_2d(vector< vector<int> > grid);
+void reset_cursor();

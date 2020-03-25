@@ -29,4 +29,13 @@ void print_2d(vector< vector<int> > grid) {
         }
         std::cout << std::endl;
     }
+    std::cout.flush();
+}
+
+
+void reset_cursor() {
+    // Moves cursor up 8 lines.
+    for ( int i = 0; i < 8; i++ ) {
+        std::cout << "\033[F";
+    }
 }

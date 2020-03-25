@@ -39,6 +39,7 @@ int main(int argc, char** argv) {
     input_file.close();
 
     print_2d(grid);
+    reset_cursor();
 
     // Create Board object and solve puzzle
     Board board = Board(grid);
