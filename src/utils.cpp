@@ -22,12 +22,13 @@ bool get_int_in_vector(vector<int> v, int x) {
 
 void print_2d(vector< vector<int> > grid) {
     // Pretty prints a 2d vector as a matrix
-    for ( vector<int> row : grid ) {
+    for ( int r = 0; r < grid.size(); r++ ) {
+        vector<int> row = grid[r];
         for ( int val : row ) {
             std::cout << val;
             std::cout << " ";
         }
-        std::cout << std::endl;
+        if ( !(r == grid.size() - 1) ) std::cout << std::endl;
     }
     std::cout.flush();
 }
@@ -38,4 +39,5 @@ void reset_cursor() {
     for ( int i = 0; i < 8; i++ ) {
         std::cout << "\033[F";
     }
+    std::cout.flush();
 }

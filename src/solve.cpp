@@ -38,12 +38,12 @@ int main(int argc, char** argv) {
     }
     input_file.close();
 
-    print_2d(grid);
-    reset_cursor();
-
     // Create Board object and solve puzzle
     Board board = Board(grid);
     board.solve();
+
+    print_2d(board.board);
+    std::cout << std::endl;
 
     // Write output to file
     std::ofstream output_file(argv[2]);
