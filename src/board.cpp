@@ -12,12 +12,12 @@
 
 #include "../include/board.hpp"
 
-using namespace std;
+using std::vector;
 
 
 bool get_int_in_vector(vector<int> v, int x) {
     // Returns bool - whether or not x is in v
-    return find(v.begin(), v.end(), x ) != v.end;
+    return find(v.begin(), v.end(), x ) != v.end();
 }
 
 

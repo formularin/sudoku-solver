@@ -15,17 +15,17 @@
 
 #include "../include/board.hpp"
 
-using namespace std;
+using std::vector;
 
 
 void print_2d(vector< vector<int> > grid) {
     // Pretty prints a 2d vector as a matrix
     for ( vector<int> row : grid ) {
         for ( int val : row ) {
-            cout << val;
-            cout << " ";
+            std::cout << val;
+            std::cout << " ";
         }
-        cout << endl;
+        std::cout << std::endl;
     }
 }
 
@@ -33,14 +33,14 @@ void print_2d(vector< vector<int> > grid) {
 int main(int argc, char** argv) {
 
     // Read file to 2d array of strings
-    ifstream input_file(argv[1]);
+    std::ifstream input_file(argv[1]);
     vector< vector<int> > grid;
-    string line;
+    std::string line;
     int l = 0;
-    while ( getline(input_file, line) ) {
+    while ( std::getline(input_file, line) ) {
         vector<int> row;
-        for (string::size_type c = 0; c < line.size(); c++) {
-            string value;
+        for (std::string::size_type c = 0; c < line.size(); c++) {
+            std::string value;
             value.push_back(line[c]);
             row.push_back(stoi(value));
         }
@@ -55,13 +55,13 @@ int main(int argc, char** argv) {
     Board board = Board(grid);
 
     // Write output to file
-    ofstream output_file(argv[2]);
+    std::ofstream output_file(argv[2]);
     for ( int x = 0; x < 9; x++ ) {
         for ( int y = 0; y < 9; y++ ) {
             output_file << board.board[x][y];
         }
         if (x != 8) {
-            output_file << endl;
+            output_file << std::endl;
         }
     }
     output_file.close();
